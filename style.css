@@ -16,7 +16,7 @@ body{
     background-color: #e7e4e3;
     margin: 0px 0px;
     font-family: 'Playfair Display', serif;
-    color:#0d1011;
+    color:#262b2b;
 }
 
 .logo{
@@ -25,25 +25,41 @@ body{
 
 header{
     height: 3rem;
+    width: 100vw;
     box-shadow: 0px 4px 5px gray;
-    color:#0d1011;
+    color:#262b2b;
 }
 h1{
     color: #262b2b;
-    
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 4rem;}
+    font-size: 2rem;}
 h2{
-    color:#0d1011;
+    color:#262b2b;
 font-weight: 800;}
 h3{
+    font-size: 1.5rem;
     margin-top: 0;
     margin-bottom:0;
+    color:#e7e4e3;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    background-color:#5f787b;
+}
+.protitle{
+    background-color: #e7e4e3;
+    color:#262b2b;
 }
 p{
     margin-top: 0;
     margin-bottom: 0;
+    padding-right: 1rem;
+    padding-left:1rem;
+    color:#262b2b;
+    font-family: 'Rubik', sans-serif;
+    line-height: 3ch;
+    letter-spacing: .10rem;
+    font-size: 1rem;
 }
 ul{
     padding: 0 0;
@@ -54,13 +70,27 @@ li{
 }
 button{
     background-color: #eab354;
-    
     margin-bottom: .25rem;
     height:44px;
     width: 88px;
-    
-    
+    border:0;
+    color:#0d1011;
+    font-size: 1rem;
+    white-space: nowrap;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 15px;
 }
+button:hover{
+    background-color:#5f787b;
+}
+button:focus,
+button:visited,
+button:active{
+    border: 3px solid #5f787b;
+}
+
+    
 .topbtn{
     width: 15rem;
 }
@@ -75,24 +105,45 @@ section{
 }
 footer{
     background-color:#5f787b ;
-    height: 2rem;
-    text-align: center;
+    height: 3rem;
+    width: 100vw;  
 }
 footer p {
    padding-top: .5rem; 
-   
+   text-align: center;
+}
+
+footer a{
+    /* text-decoration: none; */
+    color:#0d1011;
 }
 .tgreen{
     background-color: #5f787b;
-    width: 30rem;
-    border-radius: 3px;
+    width: 75vw;
 }
 .bordershadow{
     box-shadow: 0px 4px 5px gray;
     border-radius: 15px;
     border: none;
 }
-
+img{
+    padding-top: 1rem;
+    width: 60vw;
+}
+.tagline{
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: .25rem;
+    text-transform: lowercase;
+}
+.smallprint{
+    font-size:.75rem;
+    letter-spacing: normal;
+}
+.card p{
+    text-align: center;
+    letter-spacing: normal;
+}
 .card{
     width: 75vw;
 }
@@ -103,13 +154,15 @@ footer p {
     grid-template-areas: 
     "proimg"
     "protitle"
-    "probtn";
+    "probtn"
+    "desc";
     justify-items: center;
     row-gap: .75rem;;
 }
 .proimg {grid-area: proimg;}
 .protitle{grid-area:protitle;}
 .probtn{grid-area:probtn;}
+.desc{grid-area: desc}
 
 
 /*======================================================
@@ -123,7 +176,7 @@ footer p {
     "header"
     "imgpro"
     "brand"
-    " about"
+    "tagline"
     "button"
     "instagram"
     "why"
@@ -143,11 +196,12 @@ footer p {
     align-content: center;
     justify-items: center;
     row-gap: .75rem;
+    width: 100vw;
 }
-header{grid-area: header;}
+.header{grid-area: header;}
 .imgpro{ grid-area: imgpro;}
 .brandTitle{grid-area: brand;}
-.about{grid-area: about ;}
+.tagline{grid-area: tagline ;}
 .topbtn {grid-area:button ;}
 /* .instagram{grid-area:instagram ;} */
 .why{grid-area: why;}
