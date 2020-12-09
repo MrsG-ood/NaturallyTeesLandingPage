@@ -1,0 +1,173 @@
+/*====================================================
+Styles Reference 
+
+colors: 
+    cream: #e7e4e3
+    yellow: #eab354
+    tint bgreen : #5f787b
+    bgreen : #262b2b
+    dark bgreen #0d1011
+=====================================================*/
+*{
+    box-sizing: border-box;
+}
+html,
+body{
+    background-color: #e7e4e3;
+    margin: 0px 0px;
+    font-family: 'Playfair Display', serif;
+    color:#0d1011;
+}
+
+.logo{
+    margin-left: 1rem;
+}
+
+header{
+    height: 3rem;
+    box-shadow: 0px 4px 5px gray;
+    color:#0d1011;
+}
+h1{
+    color: #262b2b;
+    
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 4rem;}
+h2{
+    color:#0d1011;
+font-weight: 800;}
+h3{
+    margin-top: 0;
+    margin-bottom:0;
+}
+p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+ul{
+    padding: 0 0;
+}
+li{
+    list-style: none;
+    margin: 0px 0px;
+}
+button{
+    background-color: #eab354;
+    
+    margin-bottom: .25rem;
+    height:44px;
+    width: 88px;
+    
+    
+}
+.topbtn{
+    width: 15rem;
+}
+.btn3{
+    margin-bottom: 1.5rem;
+}
+.mobilealign{
+    text-align: center;
+}
+section{
+    text-align: center;
+}
+footer{
+    background-color:#5f787b ;
+    height: 2rem;
+    text-align: center;
+}
+footer p {
+   padding-top: .5rem; 
+   
+}
+.tgreen{
+    background-color: #5f787b;
+    width: 30rem;
+    border-radius: 3px;
+}
+.bordershadow{
+    box-shadow: 0px 4px 5px gray;
+    border-radius: 15px;
+    border: none;
+}
+
+.card{
+    width: 75vw;
+}
+.card{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "proimg"
+    "protitle"
+    "probtn";
+    justify-items: center;
+    row-gap: .75rem;;
+}
+.proimg {grid-area: proimg;}
+.protitle{grid-area:protitle;}
+.probtn{grid-area:probtn;}
+
+
+/*======================================================
+     GRID
+=====================================================*/
+.mobilegrid{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header"
+    "imgpro"
+    "brand"
+    " about"
+    "button"
+    "instagram"
+    "why"
+    "faq"
+    /* "faqtable" */
+    " guarantee"
+    " returns"
+    " goodSocial"
+    "cancel"
+    "pro1"
+    "btn1"
+    "pro2"
+    "btn2"
+    "pro3"
+    "btn3"
+    "footer";
+    align-content: center;
+    justify-items: center;
+    row-gap: .75rem;
+}
+header{grid-area: header;}
+.imgpro{ grid-area: imgpro;}
+.brandTitle{grid-area: brand;}
+.about{grid-area: about ;}
+.topbtn {grid-area:button ;}
+/* .instagram{grid-area:instagram ;} */
+.why{grid-area: why;}
+.faq{grid-area:faq ;}
+.faqtable{grid-area:faqtable ;}
+.guarantee{grid-area: guarantee;}
+.returns{grid-area:returns ;}
+.goodSocial{grid-area: goodSocial;}
+.cancel{grid-area: cancel;}
+.pro1{grid-area: pro1 ;}
+/* .btn1{grid-area:btn1;} */
+.pro2{grid-area: pro2;}
+/* .btn2{grid-area: btn2;} */
+.pro3{grid-area: pro3;}
+/* .btn3{grid-area: btn3;} */
+footer{grid-area: footer;}
+
+.centerGrid{
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
