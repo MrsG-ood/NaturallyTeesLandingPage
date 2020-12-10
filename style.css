@@ -8,6 +8,9 @@ colors:
     bgreen : #262b2b
     dark bgreen #0d1011
 =====================================================*/
+/*======================================================
+     BASIC STYLING 
+=====================================================*/
 *{
     box-sizing: border-box;
 }
@@ -19,21 +22,17 @@ body{
     color:#262b2b;
 }
 
-.logo{
+/* .logo{
     margin-left: 1rem;
-}
+} */
 
-header{
-    height: 3rem;
-    width: 100vw;
-    box-shadow: 0px 4px 5px gray;
-    color:#262b2b;
-}
 h1{
     color: #262b2b;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 2rem;}
+    font-size: 2rem;
+    margin: 0;
+}
 h2{
     color:#262b2b;
 font-weight: 800;}
@@ -45,16 +44,15 @@ h3{
     padding-top:1rem;
     padding-bottom:1rem;
     background-color:#5f787b;
+    font-family: 'Rubik', sans-serif;
 }
 .protitle{
     background-color: #e7e4e3;
     color:#262b2b;
+    font-family: 'Playfair Display', serif;
 }
 p{
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-right: 1rem;
-    padding-left:1rem;
+    margin:0;
     color:#262b2b;
     font-family: 'Rubik', sans-serif;
     line-height: 3ch;
@@ -88,11 +86,11 @@ button:focus,
 button:visited,
 button:active{
     border: 3px solid #5f787b;
-}
-
-    
+}  
 .topbtn{
     width: 15rem;
+    font-weight: bold;
+    color:#0d1011;
 }
 .btn3{
     margin-bottom: 1.5rem;
@@ -100,7 +98,7 @@ button:active{
 .mobilealign{
     text-align: center;
 }
-section{
+section h3{
     text-align: center;
 }
 footer{
@@ -112,7 +110,6 @@ footer p {
    padding-top: .5rem; 
    text-align: center;
 }
-
 footer a{
     /* text-decoration: none; */
     color:#0d1011;
@@ -128,6 +125,7 @@ footer a{
 }
 img{
     padding-top: 1rem;
+    padding-bottom: 1rem;
     width: 60vw;
 }
 .tagline{
@@ -135,6 +133,10 @@ img{
     font-size: 1rem;
     letter-spacing: .25rem;
     text-transform: lowercase;
+    padding:0;
+}
+.motto{
+    padding:0;
 }
 .smallprint{
     font-size:.75rem;
@@ -163,61 +165,28 @@ img{
 .protitle{grid-area:protitle;}
 .probtn{grid-area:probtn;}
 .desc{grid-area: desc}
-
-
-/*======================================================
-     GRID
-=====================================================*/
-.mobilegrid{
+.brandingGrid{
     display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "header"
-    "imgpro"
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
     "brand"
     "tagline"
-    "button"
-    "instagram"
-    "why"
-    "faq"
-    /* "faqtable" */
-    " guarantee"
-    " returns"
-    " goodSocial"
-    "cancel"
-    "pro1"
-    "btn1"
-    "pro2"
-    "btn2"
-    "pro3"
-    "btn3"
-    "footer";
+    "motto"
+    "button";
     align-content: center;
-    justify-items: center;
-    row-gap: .75rem;
-    width: 100vw;
+    justify-items: left;
+    row-gap: 1rem;
+    align-items: left;
+    justify-items: left;
 }
-.header{grid-area: header;}
-.imgpro{ grid-area: imgpro;}
-.brandTitle{grid-area: brand;}
-.tagline{grid-area: tagline ;}
-.topbtn {grid-area:button ;}
-/* .instagram{grid-area:instagram ;} */
-.why{grid-area: why;}
-.faq{grid-area:faq ;}
-.faqtable{grid-area:faqtable ;}
-.guarantee{grid-area: guarantee;}
-.returns{grid-area:returns ;}
-.goodSocial{grid-area: goodSocial;}
-.cancel{grid-area: cancel;}
-.pro1{grid-area: pro1 ;}
-/* .btn1{grid-area:btn1;} */
-.pro2{grid-area: pro2;}
-/* .btn2{grid-area: btn2;} */
-.pro3{grid-area: pro3;}
-/* .btn3{grid-area: btn3;} */
-footer{grid-area: footer;}
+
+/*======================================================
+     GRID SMALL DEVICES
+=====================================================*/
+
+}
+
 
 .centerGrid{
     align-content: center;
@@ -225,3 +194,190 @@ footer{grid-area: footer;}
     align-items: center;
     justify-items: center;
 }
+/*======================================================
+     MEDIA QUERIES
+=====================================================*/
+
+@media only screen and  (max-width: 600px){
+    .mobilegrid{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header"
+        "imgpro"
+        "brandingGrid"
+        "why"
+        "faq"
+        /* "faqtable" */
+        " guarantee"
+        " returns"
+        " goodSocial"
+        "cancel"
+        "pro1"
+        "pro2"
+        "pro3"
+        "footer";
+        align-content: center;
+        justify-items: center;
+        row-gap: .75rem;
+        width: 100vw;
+    }
+    .motto{
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+    .tagline{
+        padding-top: 1rem;
+        text-align: center;
+    }
+    .brandingGrid{
+        align-content: center;
+        justify-items: center;
+        row-gap: 1rem;
+        align-items: center;
+        justify-items: center;
+    }
+}
+
+ @media only screen and (min-width: 600px){ 
+    .tabletgrid{
+        display:grid;
+        grid-template-columns: .5rem 1fr 1fr .5rem;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header header header header"
+        ". brandingGrid imgpro ."
+        /* ". imgpro imgpro ." */
+        ". pro1 pro2 ."
+        /* ". pro2 pro2 ." */
+        ". pro3 pro3 ."
+        ". why why ."
+        ". faq faq ."
+        ". guarantee guarantee ."
+        ". returns returns ."
+        ". goodSocial goodSocial ."
+        ". cancel cancel ."
+        "footer footer footer footer";
+        align-content: center;
+        justify-items: center;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        width: 100vw;
+    }
+    h3{
+        border-radius: 15px;
+    }
+    .tagline{
+        text-align:left;
+    }
+    .card{
+        width:40vw;
+    }
+    .prod{
+        width: 30vw;
+    }
+    .topbtn{
+        width: 40vw;
+    }
+    .toppic{
+        width: 40vw;
+        align-self: center;
+        justify-self: center;
+    }
+    .motto{
+        text-align: left;
+    }
+    section h3{text-align: left;
+    padding-left: 1rem;}
+    section p{ 
+        text-align: center;
+         padding-left: 1rem;
+        padding-right: 1rem;}
+} 
+    
+
+@media only screen and (min-width: 992px){
+    .grid{
+        display:grid;
+        grid-template-columns: 1rem 1fr 1fr 1fr 1rem;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header header header header header"
+        /* /* ". imgpro imgpro imgpro ." */
+       /* ". brand brand brand ."
+        ". about about about ."
+        ". . button . ." */
+        ". brandingGrid imgpro imgpro ."
+        ". pro1 pro2 pro3 ."
+        ". why why why ."
+        ". faq faq faq ."
+        ". guarantee guarantee guarantee ."
+        ". returns returns returns ."
+        ". goodSocial goodSocial goodSocial ."
+        ". cancel cancel cancel ."
+        "footer footer footer footer footer";
+        align-content: center;
+        justify-items: center;
+        row-gap: .5rem;
+        column-gap: 1rem;
+        width: 100vw;
+    }
+    .card{
+        width: 25vw;
+    }
+    .topbtn{
+        width: 30vw;
+        max-width: 425px;
+    }
+    .toppic{
+        align-self: center;
+        justify-self: center;
+    }
+    .proimg{
+        width: 20vw;
+    }
+    img{
+        width: 50vw
+    }
+    h1{
+        font-size: 4rem; 
+        text-align: left;
+    }
+    .tagline{
+        font-size: 2rem;
+        text-align: left;
+        margin-left:0;
+        padding:0;
+    }
+    .motto{
+        font-size: 1rem;
+        text-align: left;
+        padding:0;
+    }
+    section{
+        text-align: left;
+    }
+    
+}
+/*======================================================
+     GRID-AREA ASSIGNMENTS
+=====================================================*/
+.header {grid-area: header;}
+.imgpro {grid-area: imgpro;}
+.brandTitle {grid-area: brand;}
+.about {grid-area: about;}
+.topbtn {grid-area:button ;}
+.why {grid-area: why;}
+.faq {grid-area:faq ;}
+.faqtable {grid-area:faqtable ;}
+.guarantee {grid-area: guarantee;}
+.returns {grid-area:returns ;}
+.goodSocial {grid-area: goodSocial;}
+.cancel {grid-area: cancel;}
+.pro1 {grid-area: pro1 ;}
+.pro2 {grid-area: pro2;}
+.pro3 {grid-area: pro3;}
+footer {grid-area: footer;}
+.motto{grid-area: motto;}
+.brandingGrid{grid-area: brandingGrid}
