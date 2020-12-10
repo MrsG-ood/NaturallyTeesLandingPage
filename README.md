@@ -1,2 +1,0 @@
-# NaturallyTeesLandingPage
- Landing Page Project 
