@@ -207,7 +207,16 @@ img{
     margin-bottom: 2rem;
     
 }
-
+#sameas{
+    align-self: left;
+    width: 2rem;
+    height: 2rem;
+}
+.submit{
+    width: 75%;
+    font-weight: bold;
+    align-self: center;
+}
 
 input{
     width:80%;
