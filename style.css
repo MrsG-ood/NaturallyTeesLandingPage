@@ -21,11 +21,6 @@ body{
     font-family: 'Playfair Display', serif;
     color:#262b2b;
 }
-
-/* .logo{
-    margin-left: 1rem;
-} */
-
 h1{
     color: #262b2b;
     font-weight: 900;
@@ -135,6 +130,7 @@ img{
     text-transform: lowercase;
     padding:0;
 }
+
 .motto{
     padding:0;
 }
@@ -181,19 +177,45 @@ img{
     justify-items: left;
 }
 
-/*======================================================
-     GRID SMALL DEVICES
-=====================================================*/
-
-}
-
-
 .centerGrid{
     align-content: center;
     justify-content: center;
     align-items: center;
     justify-items: center;
 }
+
+/*======================================================
+     GRID for Cart 
+=====================================================*/
+.formGrid{
+    display:grid;
+    grid-template-columns: .5rem 1fr .5rem;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    ". branding ."
+    ". formt ."
+    ". crumbs ."
+    ". username .";
+
+    align-content: center;
+        justify-items: center;
+        row-gap: .75rem;
+        width: 50vw;
+}
+/* .bcard{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "
+
+} */
+
+.branding{grid-area: branding;}
+.formt{grid-area:formt;}
+.crumbs{grid-area:crumbs;}
+.username{grid-area: username;}
+
 /*======================================================
      MEDIA QUERIES
 =====================================================*/
